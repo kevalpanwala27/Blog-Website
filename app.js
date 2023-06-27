@@ -51,6 +51,7 @@ app.post("/compose", function (req, res) {
     res.redirect("/");
 });
 
+
 app.get("/posts/:postName", function (req, res) {
   const requestedTitle = _.lowerCase(req.params.postName);
   for (let i=0 ;i<posts.length; ++i){

@@ -3,11 +3,11 @@
 <form action="/compose" method="post">
     <div class="form-group">
         <label for="postTitle">Title</label>
-        <input type="text" name="postTitle" class="form-control" id="postTitle" placeholder="Title">
+        <input type="text" name="postTitle" class="form-control" id="postTitle" placeholder="Title" autocomplete="off">
         </div>
         <div class="form-group">
         <label for="postBody">Body</label>
-        <textarea type="text" name="postBody" class="form-control" id="postBody" rows="5" cols="30"></textarea>
+        <textarea type="text" name="postBody" class="form-control" id="postBody" rows="5" cols="30" placeholder="Enter your text here..." autocomplete="off"></textarea>
         </div>
         <button type="submit" name="button" class="btn btn-primary">Publish</button>
 </form>
