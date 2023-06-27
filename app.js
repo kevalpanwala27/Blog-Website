@@ -15,6 +15,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+// Create an array to store the posts.
+const posts = [];
+
 app.get("/", function (req, res) {
   res.render("home", {homeStartingContent: homeStartingContent});
 });
@@ -38,7 +41,10 @@ app.post("/compose", function (req, res) {
       title: req.body.postTitle,
       content: req.body.postBody
     };
-
+    // Push object into our Array of Posts.
+    posts.push(post);
+    // Redirect to home page.
+    res.redirect("/");
 });
 
 
